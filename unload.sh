@@ -1,7 +1,7 @@
 #!/bin/sh
 ifconfig ra0 down
-rmmod rtnet7601Uap
-rmmod mt7601Uap
-rmmod rtutil7601Uap
+modprobe -r rtnet7601Uap
+modprobe -r mt7601Uap
+modprobe -r rtutil7601Uap
 pkill -ex dhcpd
-rmmod mt7601Usta
+modprobe -r mt7601Usta
